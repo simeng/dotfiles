@@ -46,5 +46,4 @@
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.tpl?\\'" . web-mode))
 
-(require 'json)
 
