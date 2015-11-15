@@ -46,4 +46,27 @@
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.tpl?\\'" . web-mode))
 
+; Disable bars
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 
+; Put us straght into empty buffer
+(setq inhibit-splash-screen t
+    initial-scratch-message nil
+    initial-major-mode 'org-mode)
+
+; Disable backupfiles
+(setq make-backup-files nil)
+
+; Replace yes and no with y and n
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+; Fix bell sounds and faster keystrokes
+(setq echo-keystrokes 0.1
+      use-dialog-box nil
+      visible-bell t)
+(show-paren-mode t)
+
+; Fix ctrl-u in insert mode (seems broken by evil mode)
+(define-key evil-insert-state-map (kbd "C-u") 'kill-whole-line)
