@@ -1,0 +1,8 @@
+_deploy()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local wordlist=$(find /srv/git/repositories -mindepth 2 -maxdepth 2 -type d | sed 's,/srv/git/repositories/,,;s,.git$,,' | grep -v '.wiki')
+    COMPREPLY=( $(compgen -W "$wordlist" -- $cur) )
+}
+complete -F _deploy deploy
+complete -F _deploy pull
