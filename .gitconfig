@@ -1,0 +1,15 @@
+[user]
+    name = Simen Graaten
+    email = simeng+git@gmail.com
+    
+[push]
+    default = simple
+
+[pull]
+    rebase = true
+
+[merge]
+    renamelimit = 10000
+    
+[fetch]
+	recurseSubmodules = true
