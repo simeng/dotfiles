@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+set mouse=a
 set sw=4
 set et
 set ts=4
