@@ -3,14 +3,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'altercation/vim-colors-solarized'
     Plug 'tpope/vim-vividchalk'
-    Plug 'vim-syntastic/syntastic'
     Plug 'hail2u/vim-css3-syntax'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-airline/vim-airline'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'tpope/vim-jdaddy'
     Plug 'othree/html5.vim'
-    Plug 'sbdchd/neoformat'
+    Plug 'dense-analysis/ale'
 call plug#end()
 
 set mouse=a
@@ -28,4 +27,6 @@ syn on
 set smarttab
 filetype plugin indent on
 
-autocmd BufWritePre *.js* Neoformat
+let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
