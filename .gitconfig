@@ -1,15 +1,14 @@
+[core]
+  pager = "less -F -X"
 [user]
-    name = Simen Graaten
-    email = simeng+git@gmail.com
-    
+  name = Simen Graaten
+  email = simeng@gmail.com
+
 [push]
-    default = simple
+  default = simple
 
 [pull]
-    rebase = true
+  rebase = true
 
-[merge]
-    renamelimit = 10000
-    
 [fetch]
 	recurseSubmodules = true
