@@ -19,11 +19,19 @@ else
   export EDITOR='nvim'
 fi
 
+export VISUAL=$EDITOR
+
+alias vim="nvim"
+
+unsetopt auto_menu
+
 PID=$(pgrep ssh-agent)
 if [ -z $PID ]; then
 	ssh-agent | grep -v echo > $HOME/.ssh/env
 	source $HOME/.ssh/env
 	ssh-add
 else
-	source $HOME/.ssh/env
+  if [ -f $HOME/.ssh/env ]; then
+    source $HOME/.ssh/env
+  fi
 fi
