@@ -27,11 +27,12 @@ unsetopt auto_menu
 
 PID=$(pgrep ssh-agent)
 if [ -z $PID ]; then
-	ssh-agent | grep -v echo > $HOME/.ssh/env
-	source $HOME/.ssh/env
+	ssh-agent | grep -vE ^echo > $HOME/.ssh/env
+	. $HOME/.ssh/env
+  echo "Running ssh-add"
 	ssh-add
 else
   if [ -f $HOME/.ssh/env ]; then
-    source $HOME/.ssh/env
+    . $HOME/.ssh/env
   fi
 fi
