@@ -25,11 +25,9 @@ alias vim="nvim"
 
 unsetopt auto_menu
 
-PID=$(pgrep ssh-agent)
-if [ -z $PID ]; then
+if [ $(pgrep -c ssh-agent) -lt 1 ]; then
 	ssh-agent | grep -vE ^echo > $HOME/.ssh/env
 	. $HOME/.ssh/env
-  echo "Running ssh-add"
 	ssh-add
 else
   if [ -f $HOME/.ssh/env ]; then
