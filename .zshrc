@@ -28,9 +28,9 @@ unsetopt auto_menu
 if [ $(pgrep -c ssh-agent) -lt 1 ]; then
 	ssh-agent | grep -vE ^echo > $HOME/.ssh/env
 	. $HOME/.ssh/env
-	ssh-add
 else
   if [ -f $HOME/.ssh/env ]; then
     . $HOME/.ssh/env
   fi
 fi
+ssh-add -l > /dev/null || ssh-add
