@@ -11,7 +11,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
@@ -22,6 +22,7 @@ fi
 export VISUAL=$EDITOR
 
 alias vim="nvim"
+alias ls="ls --color=tty --group-directories-first"
 
 unsetopt auto_menu
 

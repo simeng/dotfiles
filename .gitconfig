@@ -12,3 +12,4 @@
 
 [fetch]
 	recurseSubmodules = true
+  prune = true
