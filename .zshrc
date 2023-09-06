@@ -27,7 +27,8 @@ alias npm="pnpm"
 
 unsetopt auto_menu
 
-if [ $(pgrep -c ssh-agent) -lt 1 ]; then
+pgrep -q ssh-agent
+if [[ $? -ne 0 ]]; then
 	ssh-agent | grep -vE ^echo > $HOME/.ssh/env
 	. $HOME/.ssh/env
 else
