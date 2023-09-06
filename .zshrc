@@ -22,7 +22,10 @@ fi
 export VISUAL=$EDITOR
 
 alias vim="nvim"
-alias ls="ls --color=tty --group-directories-first"
+ls --group-directories-first >/dev/null 2>&1
+if [[ $? -eq 0 ]]; then
+  alias ls="ls --color=tty --group-directories-first"
+fi
 alias npm="pnpm"
 
 unsetopt auto_menu
