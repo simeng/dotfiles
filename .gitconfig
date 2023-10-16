@@ -1,11 +1,13 @@
 [core]
   pager = "less -F -X"
+
 [user]
   name = Simen Graaten
   email = simeng@gmail.com
 
 [push]
-  default = simple
+  default = current
+  autoSetupRemote = true
 
 [pull]
   rebase = true
@@ -13,3 +15,13 @@
 [fetch]
 	recurseSubmodules = true
   prune = true
+
+[diff]
+  colorMoved = zebra
+
+[init]
+	defaultBranch = main
+
+[alias]
+  main = checkout main 
+  prod = checkout production 
