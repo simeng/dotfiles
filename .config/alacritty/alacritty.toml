@@ -1,0 +1,28 @@
+[window]
+padding = { x = 5, y = 5 }
+dynamic_padding = true
+opacity = 0.9
+
+[font]
+normal = { family = "Iosevka Nerd Font", style = "Regular" }
+bold = { family = "Iosevka Nerd Font", style = "Bold" }
+italic = { family = "Iosevka Nerd Font", style = "Italic" }
+bold_italic = { family = "Iosevka Nerd Font", style = "Bold Italic" }
+size = 13
+
+[cursor]
+style = "Block"
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+  { key = "c", mods = "Super", action = "Copy" },
+  { key = "c", mods = "Shift | Control", action = "Copy" },
+  { key = "v", mods = "Super", action = "Paste" },
+  { key = "v", mods = "Shift | Control", action = "Paste" },
+  { key = "+", mods = "Control | Shift", action = "IncreaseFontSize" },
+  { key = "-", mods = "Control", action = "DecreaseFontSize" },
+  { key = "0", mods = "Control", action = "ResetFontSize" },
+]
