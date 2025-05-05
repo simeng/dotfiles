@@ -47,7 +47,7 @@
 
 /* The whole bar */
 #waybar {
-  background: #202020;
+  background: #000;
   color: white;
   font-family:
     Iosevka Nerd Font,
