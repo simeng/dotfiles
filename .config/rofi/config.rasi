@@ -1,0 +1,17 @@
+configuration {
+	modes: "filebrowser,drun,run,ssh,window";
+  font: "Iosevka Nerd Font";
+	show-icons: true;
+	terminal: "alacritty";
+	run-shell-command: "{terminal} -e {cmd}";
+	drun-show-actions: false;
+	sidebar-mode: true;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
