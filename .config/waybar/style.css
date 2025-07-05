@@ -60,14 +60,16 @@
 #clock,
 #cpu,
 #custom-keyboard-layout,
+#bluetooth,
 #memory,
 #mode,
 #network,
 #pulseaudio,
 #temperature,
-#tray {
-  padding-left: 10px;
-  padding-right: 10px;
+#tray,
+#window {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -141,6 +143,10 @@
   /* No styles */
 }
 
+#network.wifi {
+  color: #8f8;
+}
+
 #network.disconnected {
   color: orange;
 }
@@ -163,6 +169,10 @@
 
 #temperature.critical {
   color: red;
+}
+
+#bluetooth.connected {
+  color: #8f8;
 }
 
 #tray {
@@ -191,7 +201,4 @@
 #workspaces button.urgent {
   border-color: #c9545d;
   color: #c9545d;
-}
-
-#window {
 }
