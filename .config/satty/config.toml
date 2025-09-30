@@ -1,0 +1,8 @@
+[general]
+copy-command = "wl-copy"
+early-exit = true
+save-after-copy = true
+output-filename = "/home/simeng/Bilete/Screenshots/%+.png"
+actions-on-enter = ["save-to-clipboard", "exit"]
+actions-on-escape = ["exit"]
+initial-tool = "arrow"
