@@ -130,7 +130,7 @@
         ],
         "format-ethernet": "  {ifname}", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}"
+        "tooltip-format": "{ifname}: {ipaddr}\nSignal: {signalStrength}%, {frequency}Ghz\nU: {bandwidthUpBytes}, D: {bandwidthDownBytes}"
     },
 
     "bluetooth": {
@@ -148,7 +148,7 @@
         "format-no-controller": "󰂲",
         "tooltip-format-no-controller": "No controller",
         "tooltip-format": "{controller_alias}\t{controller_address}",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}\nBattery: {device_battery_percentage}%",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "blueman-manager"
     },
