@@ -21,6 +21,7 @@
     "height": 30,
 
     "modules-left": [
+      "custom/l",
       "hyprland/workspaces",
       "hyprland/window"
     ],
@@ -37,13 +38,24 @@
         "battery",
         "tray",
         "clock#date",
-        "clock#time"
+        "clock#time",
+        "custom/r"
     ],
 
 
     // -------------------------------------------------------------------------
     // Modules
     // -------------------------------------------------------------------------
+
+    "custom/l": {
+      "exec": "/home/simeng/bin/spacer.sh",
+      "interval": 5
+    },
+
+    "custom/r": {
+      "exec": "/home/simeng/bin/spacer.sh",
+      "interval": 5
+    },
 
     "battery": {
         "interval": 10,
