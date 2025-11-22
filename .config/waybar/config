@@ -49,12 +49,12 @@
 
     "custom/l": {
       "exec": "/home/simeng/bin/spacer.sh",
-      "interval": 5
+      "interval": 60
     },
 
     "custom/r": {
       "exec": "/home/simeng/bin/spacer.sh",
-      "interval": 5
+      "interval": 60
     },
 
     "battery": {
