@@ -120,7 +120,14 @@
     "network": {
         "on-click": "alacritty -e nmtui",
         "interval": 5,
-        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+        "format-wifi": "{icon}  {essid}", // Icon: wifi
+        "format-icons": [
+          "󰤯",
+          "󰤟",
+          "󰤢",
+          "󰤥",
+          "󰤨",
+        ],
         "format-ethernet": "  {ifname}", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}"
@@ -128,8 +135,16 @@
 
     "bluetooth": {
         "format": " {status}",
+        "format-icons": [
+          "", // Icon: battery-empty
+          "", // Icon: battery-quarter
+          "", // Icon: battery-half
+          "", // Icon: battery-three-quarter
+          ""  // Icon: battery-full
+        ],
         "format-disabled": "", // an empty format will hide the module
         "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {icon}",
         "format-no-controller": "󰂲",
         "tooltip-format-no-controller": "No controller",
         "tooltip-format": "{controller_alias}\t{controller_address}",
