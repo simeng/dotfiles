@@ -2,6 +2,8 @@ mkdir ~/.fonts
 wget -O font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Iosevka.zip
 unzip font.zip -d ~/.fonts/
 fc-cache -fv
+sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+sudo dnf install noctalia-shell
 sudo dnf copr enable solopasha/hyprland
 sudo dnf install pavucontrol blueman-manager
 sudo dnf install alacritty dolphin rofi hyprlock slurp grim satty hyprpaper hyprlock dunst
@@ -17,9 +19,9 @@ git clone git@github.com:simeng/nvim
 
 cd ~/.config
 for i in ~/dotfiles/.config/*; do
-	dirname="$(basename $i)"
-	mkdir "$dirname"
-	cd "$dirname"
-	ln -s $i .
-	cd ..
+  dirname="$(basename $i)"
+  mkdir "$dirname"
+  cd "$dirname"
+  ln -s $i .
+  cd ..
 done
