@@ -16,7 +16,7 @@ hl.monitor({ output = "DP-1", mode = "2560x1440@144", position = "2560x0", scale
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("SSH_AUTH_SOCK", "$XDG_RUNTIME_DIR/ssh-agent.socket")
+hl.env("SSH_AUTH_SOCK", os.getenv("XDG_RUNTIME_DIR") .. "/ssh-agent.socket")
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
