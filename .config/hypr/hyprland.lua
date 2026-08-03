@@ -1,10 +1,10 @@
 local terminal = "alacritty"
 local browser = "firefox"
 local fileManager = "dolphin"
-local menu = "qs -p /etc/xdg/quickshell/noctalia-shell/shell.qml ipc call launcher toggle"
--- local menu = 'rofi -show combi -modes combi -combi-modes "window,drun,run,ssh" -modes "combi,filebrowser"'
--- local lock = "hyprlock"
-local lock = "qs -p /etc/xdg/quickshell/noctalia-shell/shell.qml ipc call lockScreen lock"
+-- local menu = "qs -p /etc/xdg/quickshell/noctalia-shell/shell.qml ipc call launcher toggle"
+local menu = 'rofi -show combi -modes combi -combi-modes "window,drun,run,ssh" -modes "combi,filebrowser"'
+local lock = "hyprlock"
+-- local lock = "qs -p /etc/xdg/quickshell/noctalia-shell/shell.qml ipc call lockScreen lock"
 local screenshot_select = "slurp | grim -g - - | satty --filename -"
 local screenshot_5s_select =
 	"hyprctl notify 1 5000 'rgb(0,255,0)' \"Screenshot in 5 seconds\" ; sleep 5 ; slurp | grim -g - - | satty --filename -"
