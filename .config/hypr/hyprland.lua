@@ -11,6 +11,10 @@ local screenshot_5s_select =
 local discord = "flatpak run com.discordapp.Discord"
 local gmusic = "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod"
 
+require("hyprland.apps")
+require("hyprland.monitors")
+require("hyprland.devices")
+
 hl.monitor({ output = "DP-2", mode = "2560x1440@144", position = "0x0", scale = 1 })
 hl.monitor({ output = "DP-1", mode = "2560x1440@144", position = "2560x0", scale = 1 })
 
