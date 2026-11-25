@@ -19,9 +19,11 @@ git clone git@github.com:simeng/nvim
 
 cd ~/.config
 for i in ~/dotfiles/.config/*; do
-  dirname="$(basename $i)"
-  mkdir "$dirname"
-  cd "$dirname"
-  ln -s $i .
-  cd ..
+	dirname="$(basename $i)"
+	mkdir "$dirname"
+	cd "$dirname"
+	for j in $i/*; do
+		ln -s $i .
+	done
+	cd ..
 done
