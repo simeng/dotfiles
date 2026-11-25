@@ -1,0 +1,27 @@
+healthCheckTimeout: 600
+macros:
+  "default_ctx": 131072
+  "default_args": "--cache-type-k q8_0 --cache-type-v q8_0 --load-mode none --gpu-layers all --flash-attn on --parallel 1 --spec-type draft-mtp-adaptive,ngram-mod --spec-ngram-mod-n-match 45 --spec-draft-n-max 9 --spec-draft-n-start 9 --no-mmproj-offload"
+  "llama_bin": "/home/simeng/.llama-stew675/llama-server"
+  #"llama_bin": "/home/simeng/.llama-b11669/llama"
+  #"llama_bin": "/home/simeng/.llama-b11258/llama"
+  "audio_bin": /home/simeng/.local/bin/audiocpp_server
+models:
+  qwen-3.8-q6:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+    cmd: ${llama_bin} -hf unsloth/Qwen3.8-27B-GGUF:UD-Q6_K_XL --port ${PORT} ${default_args} -c 100000
+  qwen-3.8-q4:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+    cmd: ${llama_bin} -hf unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL --port ${PORT} ${default_args} --temperature 1.0 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --ctx-size 131072
+  qwen-27b:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+    cmd: ${llama_bin} -hf DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF:Q4_K_M --port ${PORT} ${default_args}
+  muse-glimmer:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+    cmd: ${llama_bin} -hf unsloth/Muse-Glimmer-30B-GGUF:UD-Q6_K_XL --port ${PORT} ${default_args}
+  omnivoice-q8_0:
+    cmd: ${audio_bin} --config /home/simeng/.config/audiocpp/omnivoice.json --backend hip --ui --port ${PORT}
