@@ -201,6 +201,10 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind(mainMod .. " + ALT_L", hl.dsp.window.resize(), { mouse = true })
 
+hl.bind(mainMod .. " + ALT_L + Q", hl.dsp.dpms({ action = "enable" }))
+
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.dpms({ action = "disable" }))
+
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
 	"XF86AudioRaiseVolume",
